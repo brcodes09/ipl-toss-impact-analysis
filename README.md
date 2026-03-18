@@ -11,7 +11,7 @@ Matplotlib & Seaborn: For generating those heatmaps and percentage charts.
 NumPy: For handling logical conditions and numerical arrays.
 
  | Function | Syntax | Use Case (1 Line) |
-|---|---|---|---|
+|---|---|---|
 | Loading | `pd.read_csv('file.csv')` | Loads your IPL datasheet into a workable DataFrame. | |
 | Inspection | `df.info()` | Checks for missing values and data types of columns. | |
 | Cleaning | `df.dropna(subset=['winner'])` | Removes matches that ended in 'No Result' or had missing winners. | |
