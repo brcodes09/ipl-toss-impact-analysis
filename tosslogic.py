@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-df1 = pd.read_csv("de8ur8ru.csv")
+
 df2 = pd.read_csv("IPL_2008-2024.csv")
 df3 = pd.read_csv("team_performance_dataset_2008to2024.csv")
 df4 = pd.read_csv("ipl_teams_2024_info.csv")
@@ -54,4 +54,3 @@ plt.title('Venue-wise Toss Advantage (%)')
 plt.savefig('venue_heatmap.png')
 plt.show()
 
-#2.
