@@ -2,59 +2,213 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      color: white;
-      background-color: black;
-    }
-  </style>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>IPL Toss Analysis</title>
+ <style>
+  :root {
+   --bg: #071224;
+   --panel: #0b1724;
+   --fg: #e6eef6;
+   --muted: #98a9b8;
+   --accent: #2dd4bf;
+   --max-width: 1000px;
+   --radius: 12px;
+   --gap: 1rem;
+   --pad: 1.25rem;
+   --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  *,
+  *::before,
+  *::after {
+   box-sizing: border-box
+  }
+
+  html,
+  body {
+   height: 100%;
+   margin: 0
+  }
+
+  body {
+   font-family: var(--font);
+   background: linear-gradient(180deg, var(--bg) 0%, #05101a 100%);
+   color: var(--fg);
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   line-height: 1.5;
+   padding: calc(var(--pad) * 0.5);
+  }
+
+  .container {
+   max-width: var(--max-width);
+   margin: 0 auto
+  }
+
+  header {
+   background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0));
+   padding: var(--pad);
+   border-radius: var(--radius);
+   box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+   margin-bottom: 1rem
+  }
+
+  h1 {
+   margin: 0;
+   font-size: clamp(1.25rem, 2.6vw, 2rem);
+   letter-spacing: 0.4px
+  }
+
+  header p {
+   margin: 0;
+   color: var(--muted)
+  }
+
+  main {
+   background: rgba(255, 255, 255, 0.02);
+   padding: calc(var(--pad) * 0.85);
+   border-radius: var(--radius)
+  }
+
+  section {
+   margin-bottom: var(--gap)
+  }
+
+  h2 {
+   color: var(--accent);
+   margin: 0 0 0.5rem 0;
+   font-size: 1.05rem
+  }
+
+  h3 {
+   margin: 0 0 0.35rem 0
+  }
+
+  p {
+   color: var(--fg);
+   margin: 0 0 0.75rem 0
+  }
+
+  a {
+   color: var(--accent);
+   text-decoration: none
+  }
+
+  a:hover {
+   text-decoration: underline
+  }
+
+  .muted {
+   color: var(--muted)
+  }
+
+  .row {
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--gap)
+  }
+
+  .card {
+   background: rgba(255, 255, 255, 0.01);
+   padding: 0.85rem;
+   border-radius: 8px
+  }
+
+  img,
+  svg,
+  canvas {
+   max-width: 100%;
+   height: auto;
+   display: block
+  }
+
+  footer {
+   color: var(--muted);
+   font-size: 0.95rem
+  }
+
+  @media (max-width:900px) {
+   :root {
+    --max-width: 680px
+   }
+
+   header,
+   main {
+    padding: 0.85rem
+   }
+  }
+
+  @media (max-width:480px) {
+   h1 {
+    font-size: 1.05rem
+   }
+
+   h2 {
+    font-size: 0.95rem
+   }
+
+   body {
+    padding: 0.5rem
+   }
+  }
+ </style>
 </head>
 
 <body>
-  <header>
-    <h1>PROJECT - IPL TOSS ANALYSIS</h1>
-  </header>
-  <main>
-    <section>
-      <h2>TEAM:</h2>
-      <p>1. ISHAAN - 10981
-        <BR>2. ROYCE - 10886<BR>
-        3. BRENDAN - 10985
-      </p>
-      <h2>PROBLEM STATEMENT:</h2>
-      <P>4. Toss Impact Analysis in IPL
+ <header class="container">
+  <h1>PROJECT — IPL Toss Analysis</h1>
+  <p class="muted">Exploring how toss outcomes influence match results (2008–2024)</p>
+ </header>
 
-        Problem Statement: Analyze how the toss affects match outcomes in IPL matches.
+ <main class="container">
+  <section class="card">
+   <h2>Team</h2>
+   <ul class="muted">
+    <li>1. ISHAAN — 10981</li>
+    <li>2. ROYCE — 10886</li>
+    <li>3. BRENDAN — 10985</li>
+   </ul>
+  </section>
 
-        <BR><B>Questions to Solve</B><BR>
+  <section class="card">
+   <h2>Problem Statement</h2>
+   <p>Analyze how the toss affects match outcomes in IPL matches across seasons and venues.</p>
+   <h3 class="muted">Questions to solve</h3>
+   <ul>
+    <li>Does winning the toss increase the probability of winning?</li>
+    <li>Is batting first or chasing more successful overall?</li>
+    <li>Are there venue-specific toss advantages?</li>
+   </ul>
+   <p class="muted"><strong>Desired outputs:</strong> heatmaps, percentage charts, and comparative bar graphs.</p>
+  </section>
 
-        Does winning the toss increase winning probability?<BR>
+  <section class="card">
+   <h2>Outputs & Visuals</h2>
+   <div class="row">
+    <article class="card" style="flex:1;min-width:220px">
+     <h3 class="muted">Toss Pie Chart</h3>
+     <p>Percentage breakdown of matches where toss-winner also won the match.</p>
+     <a href="toss_pie_chart.png">View image</a>
+    </article>
 
-        Is batting first or chasing more successful?<BR>
+    <article class="card" style="flex:1;min-width:220px">
+     <h3 class="muted">Decision Success Map</h3>
+     <p>Bar graphs comparing batting-first vs chasing success rates.</p>
+     <a href="decision_success.png">View image</a>
+    </article>
 
-        Toss advantage at different venues.<BR>
+    <article class="card" style="flex:1;min-width:220px">
+     <h3 class="muted">Venue Toss Analysis</h3>
+     <p>Venue-wise heatmap highlighting toss influence.</p>
+     <a href="venue_heatmap.png">View image</a>
+    </article>
+   </div>
+  </section>
 
-        <B>Output<BR></B>
-
-        Heatmaps and percentage charts.
-      </P>
-
-    </section>
-    <div>
-      <h2> Desired Outputs :</h2>
-      <p>1. percentage maps showing the correlation between winning the toss and match outcomes.<br>
-        <a href="toss_pie_chart.png">Toss Pie Chart</a><br>
-
-        2. bar gaphs comparing the success rates of batting first vs chasing.<br>
-        <a href="decision_success.png">Match Success Map</a><br>
-
-        3. Venue-wise analysis of toss advantages, highlighting any significant trends.<br>
-        <a href="venue_heatmap.png">Venue Toss Analysis</a><br>
-    </div>
-  </main>
+  <footer style="text-align:center;margin-top:1rem;padding:0.75rem 0">Data: IPL matches 2008–2024 • Analysis by Team
+  </footer>
+ </main>
 </body>
 
 </html>
