@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL Toss Analysis Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <navbar>
+        <div class="navbar">
+            <div class="logo_title">
+                <img src="/ipl-logo.png" height="100px" width="100px"></img>
+                <h1 id="navtitle"><Strong>Analysis</Strong></h1>
+            </div>
+        </div>
+    </navbar>
+  </header>
+  <main>
+      <!-- <h2>TEAM:</h2>
+      <p>1. ISHAAN - 10981
+        <BR>2. ROYCE - 10886<BR>
+        3. BRENDAN - 10985
+      </p> -->
+      <div class="bdtitle">
+        <h1 id="projectname"><strong>Toss <b id="highlight">Impact</b> Analysis in IPL</strong></h1>
+        <p id="def">Analyze how the toss affects match outcomes in IPL matches.<br>Exploring how toss outcomes influence match results (2008-2024)</p>
+      </div>
+    
+    <!-- 
+        <BR><B>Questions to Solve</B><BR>
+
+        Does winning the toss increase winning probability?<BR>
+
+        Is batting first or chasing more successful?<BR>
+
+        Toss advantage at different venues.<BR>
+
+        <B>Output<BR></B>
+
+        Heatmaps and percentage charts.
+      </P> -->
+
+    <div class="bdcontainer">
+        <div class="box-container" id="container1">
+            <div class="box">
+                <h1 class="boxno">1.</h1>
+                <h3 class="boxtitle">Toss <b id="c1">Pie</b><br>Chart</h3>
+            </div>
+
+            <br>
+            
+            <p>Percentage maps showing the correlation between winning the toss and match outcomes.</p>                
+            <button class="boxbtns"><a href="toss_pie_chart.png">View</a></button>
+        </div>
+
+        <div class="box-container" id="container2">
+             <div class="box">
+                <h1 class="boxno">2.</h1>
+                <h3 class="boxtitle">Match <b id="c2">Success</b> Map</h3>
+            </div>
+    
+            <p>Bar gaphs comparing the success rates of batting first vs chasing.</p>
+            <button class="boxbtns"><a href="decision_success.png">View</a></button>
+    
+        </div>
+
+        <div class="box-container" id="container3">
+            <div class="box">
+                <h1 class="boxno">3.</h1>
+                <h3 class="boxtitle">Venue <b id="c3">Toss</b> Analysis</h3>
+            </div>
+        
+            <p>Venue-wise analysis of toss advantages, highlighting any significant trends.</p>
+            <button class="boxbtns"><a href="venue_heatmap.png">View</a></button>
+        </div>
+    </div>
+  </main>
+</body>
+
+</html>
