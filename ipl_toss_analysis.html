@@ -20,30 +20,42 @@
     </navbar>
   </header>
   <main>
-      <!-- <h2>TEAM:</h2>
-      <p>1. ISHAAN - 10981
-        <BR>2. ROYCE - 10886<BR>
-        3. BRENDAN - 10985
-      </p> -->
+    <div class="pjcontainer">
+
+    <div class="pjbox">
+        <h2>Team</h2>
+        <ul>
+            <li>1.Ishaan-<b>10981</b></li>
+            <li>2.Brendan-<b>10985</b></li>
+            <li>3.Royce-<b>10986</b></li>
+        </ul>
+    </div>
+
+    <div class="pjbox">
+        <h2>Problem Statement</h2>
+        <center> Analyze how the toss affects match outcomes in IPL matches.</center>
+    </div>
+
+    <div class="pjbox" id="pjbox3">
+        <h3>Questions to solve</h3>
+        <ul>
+            <li>Does winning the toss increase chances of winning?</li>
+            <br>
+            <li>Is batting first or chasing better?</li>
+            <br>
+            <li>Are there venue advantages?</li>
+            <br>
+        </ul>
+
+        <p><b><u>Outputs:</u></b> Charts and graphs.</p>
+    </div>
+
+</div>
       <div class="bdtitle">
         <h1 id="projectname"><strong>Toss <b id="highlight">Impact</b> Analysis in IPL</strong></h1>
         <p id="def">Analyze how the toss affects match outcomes in IPL matches.<br>Exploring how toss outcomes influence match results (2008-2024)</p>
       </div>
     
-    <!-- 
-        <BR><B>Questions to Solve</B><BR>
-
-        Does winning the toss increase winning probability?<BR>
-
-        Is batting first or chasing more successful?<BR>
-
-        Toss advantage at different venues.<BR>
-
-        <B>Output<BR></B>
-
-        Heatmaps and percentage charts.
-      </P> -->
-
     <div class="bdcontainer">
         <div class="box-container" id="container1">
             <div class="box">
@@ -54,17 +66,17 @@
             <br>
             
             <p>Percentage maps showing the correlation between winning the toss and match outcomes.</p>                
-            <button class="boxbtns"><a href="toss_pie_chart.png">View</a></button>
+            <a href="toss_pie_chart.png" class="boxbtns">View</a>
         </div>
 
         <div class="box-container" id="container2">
              <div class="box">
                 <h1 class="boxno">2.</h1>
-                <h3 class="boxtitle">Match <b id="c2">Success</b> Map</h3>
+                <h3 class="boxtitle">Decision <b id="c2">Success</b> Map</h3>
             </div>
     
             <p>Bar gaphs comparing the success rates of batting first vs chasing.</p>
-            <button class="boxbtns"><a href="decision_success.png">View</a></button>
+            <a href="decision_success.png" class="boxbtns">View</a>
     
         </div>
 
@@ -75,7 +87,7 @@
             </div>
         
             <p>Venue-wise analysis of toss advantages, highlighting any significant trends.</p>
-            <button class="boxbtns"><a href="venue_heatmap.png">View</a></button>
+            <a href="venue_heatmap.png" class="boxbtns">View</a>
         </div>
     </div>
   </main>
